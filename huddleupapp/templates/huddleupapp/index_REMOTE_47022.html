@@ -1,0 +1,37 @@
+{% extends "huddleupapp/base.html" %}
+
+{% block title %}{{ section.title }}{% endblock %}
+
+{% block navbar %}
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="#box3">Meet the Creators</a></li>
+  {% if user.is_authenticated %}
+     <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li> 
+  {% else %}
+     <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>   
+  {% endif %}
+</ul>
+
+{% endblock %}
+{% block content %}
+<h1>Huddleup Homepage</h1>
+{% if user.is_authenticated %}
+  <h3>Welcome: {{ user.get_username }}</h3>
+{% endif %}
+<div id="box1">
+  {% load static %}
+  <img src="{% static "huddleupapp/assets/image1.jpg" %}"  width=300px height=300px alt="GWC Class picture"/>
+</div>
+<div id="box2">
+    <p>We realize that you have a busy schedule and would like to meet with your friends. <br> Well it's about time that you got on Huddle Up.<br> Be a member of our community and now meeting your friends is as easy as it could ever be! </p>
+</div>
+<div id="box3">
+<h2>Meet the Creators</h2>
+  {% load static %}  
+  <img src="{% static "huddleupapp/assets/image2.png" %}"  width=300px height=300px alt="GWC Group picture"/>
+</div>
+<div id="box4">
+  <p>We are a team of four and we really want you to meet your friends. We are hoping to unite you with the people you love hanging out. All you have to do is signup to start planning your Huddle Up outings </p>
+</div>
+{% endblock %}

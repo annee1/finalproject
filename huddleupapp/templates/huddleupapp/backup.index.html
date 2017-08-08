@@ -1,0 +1,28 @@
+<html>
+  <head>
+      <title>HuddleUp Homepage</title>
+      {% load static %}
+      <link rel="stylesheet" type="text/css" href="{% static 'huddleupapp/css/huddleup.css' %}" />
+  </head>
+  <body>
+  	<ul>
+  		<li><a class="active" href="#home">Home</a></li>
+  		<li><a href="#box2">Our Story</a></li>
+  		<li><a href="../accounts/login">Sign In</a></li>
+	   </ul>
+     <div id="box1">
+        {% load static %}
+        <img src="{% static "huddleupapp/assets/image1.jpg" %}"  width=300px height=300px alt="GWC Class picture"/>
+    </div>
+    <div id="box2">
+        <p>We realize that you have a busy schedule and would like to meet with your friends. Well it's about time that you got on Huddle Up. Be a member of our community and now meeting your friends is as easy as it could ever be! </p>
+    </div>
+    <div id="box2">
+        {% load static %}
+        <img src="{% static "huddleupapp/assets/image2.jpg" %}"  width=300px height=300px alt="GWC Group picture"/>
+        <p>We are a team of four and we really want you to meet your friends. We are hoping to unite you with the people you love hanging out. All you have to do is signup to start planning your Huddle Up outings </p>
+    </div>
+      <br>
+      </br>
+  </body>
+</html>
