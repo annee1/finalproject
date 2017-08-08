@@ -5830,7 +5830,7 @@
   							<ul class="nav nav-tabs" role="tablist">
   								<li role="presentation"><a href="index.html">Home</a></li>
   								<li role="presentation"><a href="about.html" class="active">About Us</a></li>
-                  <!-- {% if user.is_authenticated %} -->
+                  {% if user.is_authenticated %}
                     <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
                     {% else %}
                     <li role="presentation"><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
@@ -5890,37 +5890,42 @@
   		<div class="container">
   			<h3>ABOUT US</h3>
   			<div class="text-center">
-  				<div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+  				<div class= data-wow-duration="500ms" data-wow-delay="600ms">
   					<!-- <img src="images/services/1.jpg" alt="" > -->
             {% load static %}
-            <img src="{%static "huddleupapp/assets/1.jpg" %}" alt="" height="345" width="300">
+            <img src="{%static "huddleupapp/assets/1.jpg" %}" alt="" height="300" width="230">
   					<h4>Anne Huang</h4>
+
+
   					<p>My name is Anne Huang and I will be an upcoming senior at Alameda Science and Technology Institute.
             Being in Girls Who Code this summer has been a great experience since I am highly interested in Computer Science.
           During my free time, I enjoy hiking and exploring new places for food.
           I also enjoy volunteering at many places around my community like tutoring at my local elementary school and raising awareness about social issues.</p>
   				</div>
-  				<div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+
+          
+  				<div class= data-wow-duration="500ms" data-wow-delay="600ms">
             {% load static %}
-            <img src="{%static "huddleupapp/assets/2.jpg" %}" alt="" height="345" width="300">
+            <img src="{%static "huddleupapp/assets/2.jpg" %}" alt="" height="300" width="230">
   					<h4>Mahlet Copelet</h4>
   					<p>My name is Mahlet Copeland and I will be going into the 11th grade at Oakland Technical High School.
               In my free time, I like to read , draw, and watch cute dog videos on youtube.
               I am currently in Techbridge, Girls Who Code Summer Immersion Program, also I am going to be the Co-Presidents of two clubs this upcoming school year.
               When I get older I want to help people/ animals. I'm not sure if I want to pursue Engineering / CS to reach this goal or if I will take another route in my career.</p>
-  				</div>
-  				<div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms">
+
+
+  				<div class= data-wow-duration="500ms" data-wow-delay="600ms">
             {% load static %}
-            <img src="{%static "huddleupapp/assets/3.jpg" %}" alt="" height="345" width="300">
+            <img src="{%static "huddleupapp/assets/3.jpg" %}" alt="" height="300" width="230">
   					<h4>Monica Chavez</h4>
   					<p>My name is Monica Chavez. I’m 17 years old and I’m from El Salvador.
               I will be a senior this upcoming school year. I’m excited to see what this school year has for me.
               In this class I’ve learned so much, I’ve learned things I never knew I was going to be learning. When I grow up I want to become a nurse or major in CS.  </p>
   				</div>
 
-          <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms">
+          <div class= data-wow-duration="500ms" data-wow-delay="600ms">
             {% load static %}
-            <img src="{%static "huddleupapp/assets/4.jpg" %}" alt="" height="345" width="300">
+            <img src="{%static "huddleupapp/assets/4.jpg" %}" alt="" height="300" width="230">
   					<h4>Tina Black</h4>
   					<p>My name is Tina Black and I will be going into the 11th grade at San Leandro High School.
               In my free time, I like to paint or write what I am feeling.
