@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^accounts/', include('django.contrib.auth.urls')),
     #Add URL route to the huddleup urls.py
     url(r'^huddleupapp/', include('huddleupapp.urls')),
+    url(r'^detail/',include('huddleupapp.urls')),
 ]

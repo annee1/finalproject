@@ -5830,13 +5830,13 @@
   							<ul class="nav nav-tabs" role="tablist">
   								<li role="presentation"><a href="index.html">Home</a></li>
   								<li role="presentation"><a href="about.html" class="active">About Us</a></li>
-                  {% if user.is_authenticated %}
+                  <!-- {% if user.is_authenticated %} -->
                     <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
                     {% else %}
                     <li role="presentation"><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
                     {% endif %}
   								<!-- <li role="presentation"><a href="register.html">Register</a></li> -->
-  								<!-- <li role="presentation"><a href="blog.html">Blog</a></li> -->
+  								<li role="presentation"><a href="tutorial.html">Tutorial</a></li>
                   <li role="presentation"><a href="mycalendar.html">My Calendar</a></li>
   							</ul>
   						</div>
@@ -5915,7 +5915,7 @@
   					<h4>Monica Chavez</h4>
   					<p>My name is Monica Chavez. I’m 17 years old and I’m from El Salvador.
               I will be a senior this upcoming school year. I’m excited to see what this school year has for me.
-              In this class I’ve learned so much, I’ve learned things I never knew I was going to be learning. </p>
+              In this class I’ve learned so much, I’ve learned things I never knew I was going to be learning. When I grow up I want to become a nurse or major in CS.  </p>
   				</div>
 
           <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms">

@@ -1,6 +1,6 @@
-from django.shortcuts import render
 from django.shortcuts import get_object_or_404, render
-from .models import User, Friend
+from .models import Contact
+from django.shortcuts import get_list_or_404
 
 # Create your views here.
 
@@ -13,6 +13,7 @@ def aboutus(request):
 def login(request):
     return render(request, 'huddleupapp/login.html')
 
-def user_detail(request, user_id):
-	username = get_object_or_404(User, pk=user_id)
-	return render(request, 'huddleupapp/user_detail.html', {'username': username})
+def detail(request, user_id):
+	contact_list = get_list_or_404(Contact, Username=user_id)
+	context = {'contact_list': contact_list}
+	return render(request, 'huddleupapp/detail.html', context)

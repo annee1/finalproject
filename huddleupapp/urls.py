@@ -10,6 +10,6 @@ urlpatterns = [
     url(r'^index', views.index, name='index'),
     url(r'^login', views.login, name='login'),
     # ex: /huddleupapp/1/
-    url(r'^(?P<user_id>[0-9]+)/$', views.user_detail, name='user_detail'),
+    url(r'^(?P<user_id>[0-9]+)/$', views.detail, name='detail'),
 
 ]
