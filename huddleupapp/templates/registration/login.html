@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -24,7 +24,39 @@
   						<div class="navbar-brand">
   							<a href="index.html"><h1><span>HUDDLE UP</span></a>
   						</div>
-  					</div>
+  					</div> -->
+            <!DOCTYPE html>
+            <html lang="en">
+              <head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>Login</title>
+
+
+              <!-- <link href="css/bootstrap.min.css" rel="stylesheet">
+            	<link rel="stylesheet" href="css/font-awesome.min.css">
+            	<link rel="stylesheet" href="css/animate.css">
+            	<link href="css/style.css" rel="stylesheet" /> -->
+
+              </head>
+              <body>
+            	<header>
+            		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            			<div class="navigation">
+            				<div class="container">
+            					<div class="navbar-header">
+            						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
+            							<span class="sr-only">Toggle navigation</span>
+            							<span class="icon-bar"></span>
+            							<span class="icon-bar"></span>
+            							<span class="icon-bar"></span>
+            						</button>
+            						<div class="navbar-brand">
+            							<a href="index.html"><h1><span>HUDDLE UP</span></a>
+            						</div>
+            					</div>
+
 
   					<div class="navbar-collapse collapse">
   						<div class="menu">
@@ -37,7 +69,7 @@
   								<li role="presentation"><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
                   {% endif %}
   								<!-- <li role="presentation"><a href="register.html">Register</a></li> -->
-  								<!-- <li role="presentation"><a href="blog.html">Blog</a></li> -->
+  								<li role="presentation"><a href="tutorial.html">Tutorial</a></li>
                   <li role="presentation"><a href="mycalendar.html">My Calendar</a></li>
   							</ul>
   						</div>
@@ -5833,11 +5865,34 @@
 
   </style>
 
+  <div id="breadcrumb">
+    <div class="container">
+      <div class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li>LOGIN</li>
+      </div>
+    </div>
+  </div>
 
-<br>
-</br>
-<br>
-</br>
+<br/>
+  <div id="content">
+  <div class="header">
+    <div class="header-inner">
+      <a class="navbar-brand center-block" href="index.html" title="Home">
+        <h1 class="hidden">
+        </h1>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            PLEASE LOGIN HERE
+          </h3>
+        </div>
+
 {% block content %}
 
 
@@ -5850,9 +5905,11 @@
     <p>Your account doesn't have access to this page. To proceed,
     please login with an account that has access.</p>
     {% else %}
-    <p>Please login to see this page.</p>
+    <!-- <p>Please login to see this page.</p> -->
     {% endif %}
     {% endif %}
+
+  <br/>
 
     <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
@@ -5867,21 +5924,44 @@
     </div>
 
  <div>
-  <br>
-  </br>
-  <input class="btn btn-lg btn-primary btn-block" href="https://annee1.github.io/portfolio/final/login.html" type="submit" value="LOGIN" />
 
-  <input type="hidden" name="next" value="{{ next }}" />
-</div>
-</form>
-<!-- ======= -->
-    <div>
-        <!-- <input type="submit" value="login" /> -->
-        <input type="hidden" name="next" value="{{ next }}" />
-    </div>
-    </form>
+          <div class="panel-body">
+            <form accept-charset="UTF-8" role="form">
+              <fieldset>
+                <div class="form-group">
+                  <div class="input-group input-group-lg">
+                    <!-- <span class="input-group-addon"><i class="fa fa-fw fa-user"></i></span> -->
+                    <!-- <input type="text" class="form-control" placeholder="Enter Username" name="username" required> -->
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group input-group-lg">
+                    <!-- <span class="input-group-addon"><i class="fa fa-fw fa-lock"></i></span> -->
+                    <!-- <input type="password" class="form-control" placeholder="Enter Password" name="password" required> -->
+                  </div>
+                </div>
+                <input class="btn btn-lg btn-primary btn-block" href="https://annee1.github.io/portfolio/final/login.html" type="submit" value="LOGIN" />
 
-    {# Assumes you setup the password_reset view in your URLconf #}
-    <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+                <input type="hidden" name="next" value="{{ next }}" />
+              </div>
+              </form>
+              <!-- ======= -->
+                  <div>
+                      <!-- <input type="submit" value="login" /> -->
+                      <input type="hidden" name="next" value="{{ next }}" />
+                  </div>
+                  </form>
+
+                  {# Assumes you setup the password_reset view in your URLconf #}
+                <!-- <input type="submit" value="Log In" id="submit"> -->
+              </fieldset>
+            </form>
+            <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+
+			<div class="pull-right">
+				<a href="#home" class="scrollup"><i class="fa fa-angle-up fa-3x"></i></a>
+			</div>
+		</div>
+	</footer>
 
 {% endblock %}

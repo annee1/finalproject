@@ -5816,7 +5816,7 @@ a.scrollup:hover{
     								<li role="presentation"><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
                     {% endif %}
   								<!-- <li role="presentation"><a href="register.html">Register</a></li> -->
-  								<!-- <li role="presentation"><a href="blog.html">Blog</a></li> -->
+  								<li role="presentation"><a href="tutorial.html">Tutorial</a></li>
                   <li role="presentation"><a href="mycalendar.html">My Calendar</a></li>
   							</ul>
   						</div>
@@ -5837,7 +5837,12 @@ a.scrollup:hover{
                           <div class="row slide-margin">
                               <div class="col-sm-6">
                                   <div class="carousel-content">
-                                      <h2 class="animation animated-item-1">HUDDLE UP</h2>
+                                    <center> <h2 class="animation animated-item-1"> WELCOME TO </h2> </center>
+                                      <p><center><h2 class="animation animated-item-1">HUDDLE UP</h2></center></p>
+                                      {% if user.is_authenticated %}
+                                        <center><h2 class="animation animated-item-1" style="color: #48ADEA">{{user.first_name}}!</h2></center>
+                                      {% endif %}
+                                      <!-- <center><h2 class="animation animated-item-1">HUDDLE UP</h2></center> -->
                                   </div>
                               </div>
 
@@ -5870,7 +5875,7 @@ a.scrollup:hover{
               I rarely have any time to go out with my friends or time with my husband alone. This app makes everything so much easier and faster for me to know if I'll have time to go out. 10/10 would recommend!</p>
       		</div>
       		<div class="col-md-4">
-      			<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+      			<span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
       			<h3>Roberto Fuentes</h3>
       			<p>Hey there, looking for a real beneficial calendar that will keep you up to date to all of your events? Try this app, Huddle up, I garantee you this app will help you out throughout your busiest days.</p>
       		</div>
