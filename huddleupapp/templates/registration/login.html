@@ -66,11 +66,12 @@
   								<li role="presentation"><a href="tutorial.html">Tutorial</a></li>
                   <li role="presentation"><a href="mycalendar.html">My Calendar</a></li>
                   {% if user.is_authenticated %}
-                    <li role="presentation"><a href="{% url 'huddleupapp:detail' user.id %}">User Details</a></li>
-                    <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
-                    {% else %}
-    								<li role="presentation"><a href="{% url 'login'%}?next={{request.path}}" class="active">Login</a></li>
-                    {% endif %}
+                    <li role="presentation"><a href="mycalendar.html">My Calendar</a></li>
+                  <li role="presentation"><a href="{% url 'huddleupapp:detail' user.id %}">My Contacts</a></li>
+                  <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+                  {% else %}
+                  <li role="presentation"><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+                  {% endif %}
 
   							</ul>
   						</div>

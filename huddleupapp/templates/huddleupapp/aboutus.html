@@ -5785,6 +5785,14 @@
     color:#80b3cc;
   }
 
+  .rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
   </style>
 
   <!DOCTYPE html>
@@ -5831,13 +5839,14 @@
                   <li role="presentation"><a href="index.html">Home</a></li>
                   <li role="presentation"><a href="/huddleupapp/aboutus.html" class="active">About Us</a></li>
                   <li role="presentation"><a href="tutorial.html">Tutorial</a></li>
-                  <li role="presentation"><a href="mycalendar.html">My Calendar</a></li>
+
                   {% if user.is_authenticated %}
-                    <li role="presentation"><a href="{% url 'huddleupapp:detail' user.id %}">User Details</a></li>
-                    <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
-                    {% else %}
-                    <li role="presentation"><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
-                    {% endif %}
+                    <li role="presentation"><a href="mycalendar.html">My Calendar</a></li>
+                  <li role="presentation"><a href="{% url 'huddleupapp:detail' user.id %}">My Contacts</a></li>
+                  <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+                  {% else %}
+                  <li role="presentation"><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+                  {% endif %}
 
           </div>
   			</div>
@@ -5858,7 +5867,7 @@
   			<h3>ABOUT HUDDLE UP</h3>
   			<hr>
   			<div class="col-md-7 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-  				<center><img src="images/7.jpg" class="img-responsive"></center>
+  				<!-- <center><img src="images/7.jpg" class="img-responsive"></center> -->
   				<h4>OUR MISSION</h4>
   				<p>Our mission at Huddle Up is to make sure our users are satisfied with our website and are able to make time to hang out with there friends without having to worry about if they have plans or a busy schedule that day.
             We want our users to be able to have a good time and with the help of our website it is easy to show you days that you are free to met up and at what time that you are available.</p>
@@ -5904,7 +5913,7 @@
 
   				<div class= data-wow-duration="500ms" data-wow-delay="600ms">
             {% load static %}
-            <img src="{%static "huddleupapp/assets/2.jpg" %}" alt="" height="300" width="230">
+            <img src="{%static "huddleupapp/assets/2.jpg" %}" class="rotate90" alt="" height="300" width="230">
   					<h4>Mahlet Copeland</h4>
   					<p>My name is Mahlet Copeland and I will be going into the 11th grade at Oakland Technical High School.
               In my free time, I like to read , draw, and watch cute dog videos on youtube.
@@ -5914,7 +5923,7 @@
 
   				<div class= data-wow-duration="500ms" data-wow-delay="600ms">
             {% load static %}
-            <img src="{%static "huddleupapp/assets/3.jpg" %}" alt="" height="300" width="230">
+            <img src="{%static "huddleupapp/assets/3.jpg" %}" class="rotate90" alt="" height="300" width="230">
   					<h4>Monica Chavez</h4>
   					<p>My name is Monica Chavez. I’m 17 years old and I’m from El Salvador.
               I will be a senior this upcoming school year. I’m excited to see what this school year has for me.
@@ -5923,7 +5932,7 @@
 
           <div class= data-wow-duration="500ms" data-wow-delay="600ms">
             {% load static %}
-            <img src="{%static "huddleupapp/assets/4.jpg" %}" alt="" height="300" width="230">
+            <img src="{%static "huddleupapp/assets/4.jpg" %}" class="rotate90" alt="" height="300" width="230">
   					<h4>Tina Black</h4>
   					<p>My name is Tina Black and I will be going into the 11th grade at San Leandro High School.
               In my free time, I like to paint or write what I am feeling.

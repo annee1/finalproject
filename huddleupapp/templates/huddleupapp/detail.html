@@ -5820,13 +5820,13 @@ a.scrollup:hover{
                  <li role="presentation"><a href="/huddleupapp/index.html">Home</a></li>
                  <li role="presentation"><a href="/huddleupapp/aboutus.html">About Us</a></li>
                  <li role="presentation"><a href="/huddleupapp/tutorial.html">Tutorial</a></li>
-                 <li role="presentation"><a href="/huddleupapp/mycalendar.html" >My Calendar</a></li>
                  {% if user.is_authenticated %}
-                   <li role="presentation"><a href="{% url 'huddleupapp:detail' user.id %}" class="active">User Details</a></li>
-                   <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
-                   {% else %}
-                   <li role="presentation"><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
-                   {% endif %}
+                   <li role="presentation"><a href="mycalendar.html">My Calendar</a></li>
+                 <li role="presentation"><a href="{% url 'huddleupapp:detail' user.id %}" class= "active">My Contacts</a></li>
+                 <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+                 {% else %}
+                 <li role="presentation"><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+                 {% endif %}
 
                </ul>
              </div>
@@ -5851,19 +5851,19 @@ a.scrollup:hover{
 	<p>
 	{{contact.id}}. {{ contact.contact_firstname }} {{ contact.contact_lastname }}
 	{% if contact.contact_username == "anneh" %}
-			{% load static %} 
+			{% load static %}
 			<img src="{%static "huddleupapp/assets/1.jpg" %}" alt="" height="75" width="">
 			<img src="{% static "huddleupapp/assets/anne.jpg" %}"  width=600px height=550px alt="Anne Picture"/>
 	{% elif contact.contact_username == "mahletc" %}
-			{% load static %} 
+			{% load static %}
 			<img src="{%static "huddleupapp/assets/2.jpg" %}" alt="" height="75" width="">
 			<img src="{% static "huddleupapp/assets/mahlet.jpg" %}"  width=550px height=700px alt="Anne Picture"/>
 	{% elif contact.contact_username == "monicac" %}
-			{% load static %} 
+			{% load static %}
 			<img src="{%static "huddleupapp/assets/3.jpg" %}" alt="" height="75" width="">
 			<img src="{% static "huddleupapp/assets/monica.jpg" %}"  width=600px height=550px alt="Anne Picture"/>
 	{% elif contact.contact_username == "tinab" %}
-			{% load static %} 
+			{% load static %}
 			<img src="{%static "huddleupapp/assets/4.jpg" %}" alt="" height="75" width="">
 			<img src="{% static "huddleupapp/assets/tina.jpg" %}"  width=600px height=550px alt="Anne Picture"/>
 	{% endif %}
@@ -5876,9 +5876,3 @@ a.scrollup:hover{
 {% endif %}
 
 </center>
-
-
-
-
-
-

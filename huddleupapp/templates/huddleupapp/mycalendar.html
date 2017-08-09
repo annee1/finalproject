@@ -5820,9 +5820,10 @@ a.scrollup:hover{
                  <li role="presentation"><a href="index.html">Home</a></li>
                  <li role="presentation"><a href="/huddleupapp/aboutus.html">About Us</a></li>
                  <li role="presentation"><a href="tutorial.html">Tutorial</a></li>
-                 <li role="presentation"><a href="mycalendar.html" class="active">My Calendar</a></li>
+
                  {% if user.is_authenticated %}
-                   <li role="presentation"><a href="{% url 'huddleupapp:detail' user.id %}">User Details</a></li>
+                  <li role="presentation"><a href="mycalendar.html" class="active">My Calendar</a></li>
+                   <li role="presentation"><a href="{% url 'huddleupapp:detail' user.id %}">My Contacts</a></li>
                    <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
                    {% else %}
                    <li role="presentation"><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
@@ -5846,27 +5847,20 @@ a.scrollup:hover{
    </div>
 {% if user.is_authenticated %}
 	{% if user.first_name == "Mahlet" %}
-		{% load static %} 
+		{% load static %}
 			<img style="width:1200px;height:800px;"
 			src="{% static "huddleupapp/assets/mahlet.jpg" %}"  width=300px height=300px alt="Anne Picture"/>
 	{% elif user.first_name == "Monica" %}
-		{% load static %} 
+		{% load static %}
 			<img style="width:1200px;height:800px;"
 			src="{% static "huddleupapp/assets/monica.jpg" %}"  width=300px height=300px alt="Anne Picture"/>
 	{% elif user.first_name == "Anne" %}
-		{% load static %} 
+		{% load static %}
 			<img style="width:1200px;height:800px;"
 			src="{% static "huddleupapp/assets/anne.jpg" %}"  width=300px height=300px alt="Anne Picture"/>
 	{% elif user.first_name == "Tina" %}
-		{% load static %} 
+		{% load static %}
 			<img style="width:1200px;height:800px;"
 			src="{% static "huddleupapp/assets/tina.jpg" %}"  width=300px height=300px alt="Anne Picture"/>
 	{% endif %}
 {% endif %}
-
-
-
-
-
-
-
