@@ -5794,7 +5794,7 @@ a.scrollup:hover{
      <meta charset="utf-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1">
-     <title>Tutorial</title>
+     <title>My Calendar</title>
    </head>
 
  <body>
@@ -5819,8 +5819,8 @@ a.scrollup:hover{
                <ul class="nav nav-tabs" role="tablist">
                  <li role="presentation"><a href="index.html">Home</a></li>
                  <li role="presentation"><a href="/huddleupapp/aboutus.html">About Us</a></li>
-                 <li role="presentation"><a href="tutorial.html" class="active">Tutorial</a></li>
-                 <li role="presentation"><a href="mycalendar.html">My Calendar</a></li>
+                 <li role="presentation"><a href="tutorial.html">Tutorial</a></li>
+                 <li role="presentation"><a href="mycalendar.html" class="active">My Calendar</a></li>
                  {% if user.is_authenticated %}
                    <li role="presentation"><a href="{% url 'huddleupapp:detail' user.id %}">User Details</a></li>
                    <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
@@ -5840,7 +5840,7 @@ a.scrollup:hover{
      <div class="container">
        <div class="breadcrumb">
          <li><a href="index.html">Home</a></li>
-         <li>Tutorial</li>
+         <li>My Calendar</li>
        </div>
      </div>
    </div>
