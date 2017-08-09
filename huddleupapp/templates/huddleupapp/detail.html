@@ -20,6 +20,7 @@
 	{{contact.id}}. {{ contact.contact_firstname }} {{ contact.contact_lastname }}
 	{% if contact.contact_username == "anneh" %}
 			{% load static %} 
+			<img src="{%static "huddleupapp/assets/1.jpg" %}" alt="" height="100" width="100">
 			<img src="{% static "huddleupapp/assets/anne.jpg" %}"  width=300px height=300px alt="Anne Picture"/>
 	{% elif contact.contact_username == "mahletc" %}
 			{% load static %} 
@@ -39,3 +40,10 @@
 	<p>This user has no contacts</p>
 {% endif %}
 {% endblock %}
+
+
+
+tina- <img src="{%static "huddleupapp/assets/4.jpg" %}" alt="" height="300" width="230">
+monica-<img src="{%static "huddleupapp/assets/3.jpg" %}" alt="" height="300" width="230">
+mahlet-<img src="{%static "huddleupapp/assets/2.jpg" %}" alt="" height="300" width="230">
+anne-<img src="{%static "huddleupapp/assets/1.jpg" %}" alt="" height="300" width="250">

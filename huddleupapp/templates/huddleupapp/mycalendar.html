@@ -5796,7 +5796,7 @@ a.scrollup:hover{
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <title>My Calendar</title>
    </head>
-
+<!-- Navigation -->
  <body>
    <header>
      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -5835,7 +5835,7 @@ a.scrollup:hover{
        </div>
      </nav>
    </header>
-
+<!-- Little Nav -->
    <div id="breadcrumb">
      <div class="container">
        <div class="breadcrumb">
@@ -5844,3 +5844,29 @@ a.scrollup:hover{
        </div>
      </div>
    </div>
+{% if user.is_authenticated %}
+	{% if user.first_name == "Mahlet" %}
+		{% load static %} 
+			<img style="width:1200px;height:800px;"
+			src="{% static "huddleupapp/assets/mahlet.jpg" %}"  width=300px height=300px alt="Anne Picture"/>
+	{% elif user.first_name == "Monica" %}
+		{% load static %} 
+			<img style="width:1200px;height:800px;"
+			src="{% static "huddleupapp/assets/monica.jpg" %}"  width=300px height=300px alt="Anne Picture"/>
+	{% elif user.first_name == "Anne" %}
+		{% load static %} 
+			<img style="width:1200px;height:800px;"
+			src="{% static "huddleupapp/assets/anne.jpg" %}"  width=300px height=300px alt="Anne Picture"/>
+	{% elif user.first_name == "Tina" %}
+		{% load static %} 
+			<img style="width:1200px;height:800px;"
+			src="{% static "huddleupapp/assets/tina.jpg" %}"  width=300px height=300px alt="Anne Picture"/>
+	{% endif %}
+{% endif %}
+
+
+
+
+
+
+
