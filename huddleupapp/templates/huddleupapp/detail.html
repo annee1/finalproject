@@ -12,20 +12,30 @@
 {% endblock %}
 {% block content %}
 <title>HuddleUp UserProfile</title>
-{% if user.is_authenticated %}
-	<!-- <h3>{{ user.get_username }}'s Calendar</h3> -->
-
-<h1>{{ user.get_username }}'s Contacts:</h1>
+<h1>{{ user.first_name}} {{user.last_name}}'s Contacts:</h1>
 {% csrf_token %}
 {% if contact_list %}
-	<p>
 	{% for contact in contact_list %}
-		{{contact.id}}. {{ contact.contact_firstname }} {{ contact.contact_lastname }}
-		<br>
+	<p>
+	{{contact.id}}. {{ contact.contact_firstname }} {{ contact.contact_lastname }}
+	{% if contact.contact_username == "anneh" %}
+			{% load static %} 
+			<img src="{% static "huddleupapp/assets/anne.jpg" %}"  width=300px height=300px alt="Anne Picture"/>
+	{% elif contact.contact_username == "mahletc" %}
+			{% load static %} 
+			<img src="{% static "huddleupapp/assets/mahlet.jpg" %}"  width=300px height=300px alt="Anne Picture"/>
+	{% elif contact.contact_username == "monicac" %}
+			{% load static %} 
+			<img src="{% static "huddleupapp/assets/monica.jpg" %}"  width=300px height=300px alt="Anne Picture"/>
+	{% elif contact.contact_username == "tinab" %}
+			{% load static %} 
+			<img src="{% static "huddleupapp/assets/tina.jpg" %}"  width=300px height=300px alt="Anne Picture"/>
+	{% endif %}
+	<br>
+	</p>
 	{% endfor %}
 	</p>
 {% else %}
-	<p>This user has no contacts.</p>
-{% endif %}
+	<p>This user has no contacts</p>
 {% endif %}
 {% endblock %}
