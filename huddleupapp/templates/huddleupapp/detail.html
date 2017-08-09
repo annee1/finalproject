@@ -5844,35 +5844,44 @@ a.scrollup:hover{
        </div>
      </div>
    </div>
-   <center>
-   <h1>{{ user.first_name}} {{user.last_name}}'s Contacts:</h1>
-{% if contact_list %}
-	{% for contact in contact_list %}
-	<p>
-	{{contact.id}}. {{ contact.contact_firstname }} {{ contact.contact_lastname }}
-	{% if contact.contact_username == "anneh" %}
-			{% load static %}
-			<img src="{%static "huddleupapp/assets/1.jpg" %}" alt="" height="75" width="">
-			<img src="{% static "huddleupapp/assets/anne.jpg" %}"  width=600px height=550px alt="Anne Picture"/>
-	{% elif contact.contact_username == "mahletc" %}
-			{% load static %}
-			<img src="{%static "huddleupapp/assets/2.jpg" %}" alt="" height="75" width="">
-			<img src="{% static "huddleupapp/assets/mahlet.jpg" %}"  width=550px height=700px alt="Anne Picture"/>
-	{% elif contact.contact_username == "monicac" %}
-			{% load static %}
-			<img src="{%static "huddleupapp/assets/3.jpg" %}" alt="" height="75" width="">
-			<img src="{% static "huddleupapp/assets/monica.jpg" %}"  width=600px height=550px alt="Anne Picture"/>
-	{% elif contact.contact_username == "tinab" %}
-			{% load static %}
-			<img src="{%static "huddleupapp/assets/4.jpg" %}" alt="" height="75" width="">
-			<img src="{% static "huddleupapp/assets/tina.jpg" %}"  width=600px height=550px alt="Anne Picture"/>
-	{% endif %}
-	<br>
-	</p>
-	{% endfor %}
-	</p>
-{% else %}
-	<p>This user has no contacts</p>
-{% endif %}
+   {% if user.is_authenticated %}
+		   <center>
+		   <h1>{{ user.first_name}} {{user.last_name}}'s Contacts:</h1>
+		{% if contact_list %}
+			{% for contact in contact_list %}
+			<p>
+			{{contact.id}}. {{ contact.contact_firstname }} {{ contact.contact_lastname }}
+			{% if contact.contact_username == "anneh" %}
+					{% load static %}
+					<img src="{%static "huddleupapp/assets/1.jpg" %}" alt="" height="75" width="">
+					<img src="{% static "huddleupapp/assets/anne.jpg" %}"  width=600px height=550px alt="Anne Picture"/>
+			{% elif contact.contact_username == "mahletc" %}
+					{% load static %}
+					<img src="{%static "huddleupapp/assets/2.jpg" %}" alt="" height="75" width="">
+					<img src="{% static "huddleupapp/assets/mahlet.jpg" %}"  width=550px height=700px alt="Anne Picture"/>
+			{% elif contact.contact_username == "monicac" %}
+					{% load static %}
+					<img src="{%static "huddleupapp/assets/3.jpg" %}" alt="" height="75" width="">
+					<img src="{% static "huddleupapp/assets/monica.jpg" %}"  width=600px height=550px alt="Anne Picture"/>
+			{% elif contact.contact_username == "tinab" %}
+					{% load static %}
+					<img src="{%static "huddleupapp/assets/4.jpg" %}" alt="" height="75" width="">
+					<img src="{% static "huddleupapp/assets/tina.jpg" %}"  width=600px height=550px alt="Anne Picture"/>
+			{% endif %}
+			<br>
+			</p>
+			{% endfor %}
+			</p>
+		{% else %}
+			<p>This user has no contacts</p>
+		{% endif %}
 
-</center>
+		
+		</center>
+	{% else %}
+	{% endif %}
+
+
+
+
+
