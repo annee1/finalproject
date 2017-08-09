@@ -13,6 +13,12 @@ def aboutus(request):
 def login(request):
     return render(request, 'huddleupapp/login.html')
 
+def tutorial(request):
+    return render(request, 'huddleupapp/tutorial.html')
+
+def mycalendar(request):
+    return render(request, 'huddleupapp/mycalendar.html')
+
 def detail(request, user_id):
 	contact_list = get_list_or_404(Contact, Username=user_id)
 	context = {'contact_list': contact_list}

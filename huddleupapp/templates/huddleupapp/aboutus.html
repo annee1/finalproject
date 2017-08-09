@@ -5825,23 +5825,21 @@
   						</div>
   					</div>
 
-  					<div class="navbar-collapse collapse">
-  						<div class="menu">
-  							<ul class="nav nav-tabs" role="tablist">
-  								<li role="presentation"><a href="index.html">Home</a></li>
-  								<li role="presentation"><a href="about.html" class="active">About Us</a></li>
+            <div class="navbar-collapse collapse">
+              <div class="menu">
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation"><a href="index.html">Home</a></li>
+                  <li role="presentation"><a href="/huddleupapp/aboutus.html" class="active">About Us</a></li>
+                  <li role="presentation"><a href="tutorial.html">Tutorial</a></li>
+                  <li role="presentation"><a href="mycalendar.html">My Calendar</a></li>
                   {% if user.is_authenticated %}
-                    <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+                    <li role="presentation"><a href="{% url 'huddleupapp:detail' user.id %}">User Details</a></li>
+                    li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
                     {% else %}
                     <li role="presentation"><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
                     {% endif %}
-  								<!-- <li role="presentation"><a href="register.html">Register</a></li> -->
-  								<li role="presentation"><a href="tutorial.html">Tutorial</a></li>
-                  <li role="presentation"><a href="mycalendar.html">My Calendar</a></li>
-  							</ul>
-  						</div>
-  					</div>
-  				</div>
+
+          </div>
   			</div>
   		</nav>
   	</header>
@@ -5893,7 +5891,7 @@
   				<div class= data-wow-duration="500ms" data-wow-delay="600ms">
   					<!-- <img src="images/services/1.jpg" alt="" > -->
             {% load static %}
-            <img src="{%static "huddleupapp/assets/1.jpg" %}" alt="" height="300" width="230">
+            <img src="{%static "huddleupapp/assets/1.jpg" %}" alt="" height="300" width="250">
   					<h4>Anne Huang</h4>
 
 
@@ -5903,11 +5901,11 @@
           I also enjoy volunteering at many places around my community like tutoring at my local elementary school and raising awareness about social issues.</p>
   				</div>
 
-          
+
   				<div class= data-wow-duration="500ms" data-wow-delay="600ms">
             {% load static %}
             <img src="{%static "huddleupapp/assets/2.jpg" %}" alt="" height="300" width="230">
-  					<h4>Mahlet Copelet</h4>
+  					<h4>Mahlet Copeland</h4>
   					<p>My name is Mahlet Copeland and I will be going into the 11th grade at Oakland Technical High School.
               In my free time, I like to read , draw, and watch cute dog videos on youtube.
               I am currently in Techbridge, Girls Who Code Summer Immersion Program, also I am going to be the Co-Presidents of two clubs this upcoming school year.
