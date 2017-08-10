@@ -64,7 +64,6 @@
   								<li role="presentation"><a href="index.html">Home</a></li>
   								<li role="presentation"><a href="/huddleupapp/aboutus.html">About Us</a></li>
   								<li role="presentation"><a href="tutorial.html">Tutorial</a></li>
-                  <li role="presentation"><a href="mycalendar.html">My Calendar</a></li>
                   {% if user.is_authenticated %}
                     <li role="presentation"><a href="mycalendar.html">My Calendar</a></li>
                   <li role="presentation"><a href="{% url 'huddleupapp:detail' user.id %}">My Contacts</a></li>
